@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.farma.appfarmaenlace.ui.login.view.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/irhome"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.farma.appfarmaenlace.ui.home.view.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <argument
+            android:name="farmacia"
+            app:argType="com.farma.appfarmaenlace.ui.home.model.Farmacia" />
+        <argument
+            android:name="ipfarmacia"
+            app:argType="string" />
+        <action
+            android:id="@+id/iropcionesdig"
+            app:destination="@id/opcionDigitalizacionFragment" />
+        <action
+            android:id="@+id/irnotificaciones"
+            app:destination="@id/notificacionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/escanerFragment"
+        android:name="com.farma.appfarmaenlace.ui.escaner.view.DocumentoFragment"
+        android:label="Información documento"
+        tools:layout="@layout/fragment_documento" >
+        <action
+            android:id="@+id/irImagenesFragment"
+            app:destination="@id/imagenesFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/documentoEscanerActivity"
+        android:name="com.farma.appfarmaenlace.ui.tratamientoImagen.view.DocumentoEscanerActivity"
+        android:label="activity_documento_escaner"
+        tools:layout="@layout/activity_documento_escaner" />
+    <fragment
+        android:id="@+id/imagenesFragment"
+        android:name="com.farma.appfarmaenlace.ui.tratamientoImagen.view.ImagenesFragment"
+        android:label="Documentos digitalizados"
+        tools:layout="@layout/fragment_imagenes" >
+        <argument
+            android:name="manual"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_homeFragment"
+        app:destination="@id/homeFragment"
+        app:popUpTo="@id/homeFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_global_loginFragment"
+        app:destination="@id/loginFragment"
+        app:popUpTo="@id/loginFragment"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/opcionDigitalizacionFragment"
+        android:name="com.farma.appfarmaenlace.ui.opcionesdig.view.OpcionDigitalizacionFragment"
+        android:label="fragment_opcion_digitalizacion"
+        tools:layout="@layout/fragment_opcion_digitalizacion" >
+        <action
+            android:id="@+id/irescaner"
+            app:destination="@id/escanerFragment" />
+        <action
+            android:id="@+id/irdepdocumentos"
+            app:destination="@id/depDocumentosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/depDocumentosFragment"
+        android:name="com.farma.appfarmaenlace.ui.depdocumentos.view.DepDocumentosFragment"
+        android:label="fragment_dep_documentos"
+        tools:layout="@layout/fragment_dep_documentos" >
+        <action
+            android:id="@+id/irdibujarpropiedades"
+            app:destination="@id/dibujarPropiedadesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dibujarPropiedadesFragment"
+        android:name="com.farma.appfarmaenlace.ui.dibujadopropiedades.view.DibujarPropiedadesFragment"
+        android:label="fragment_dibujar_propiedades"
+        tools:layout="@layout/fragment_dibujar_propiedades" >
+        <action
+            android:id="@+id/irescaner"
+            app:destination="@id/imagenesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/notificacionFragment"
+        android:name="com.farma.appfarmaenlace.ui.notificaciones.view.NotificacionFragment"
+        android:label="fragment_notificacion"
+        tools:layout="@layout/fragment_notificacion" >
+        <action
+            android:id="@+id/iropcionesdig"
+            app:destination="@id/opcionDigitalizacionFragment" />
+    </fragment>
+</navigation>

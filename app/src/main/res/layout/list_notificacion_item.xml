@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:id="@+id/linearlayout"
+    >
+    <TextView
+        android:id="@+id/txtNro"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="1" />
+    <TextView
+        android:id="@+id/txtMensaje"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".7"
+        android:text="mensaje de notficación lorem ipsum afdf asfadff fadfafd dfasdfd dafadfadsf fsdf fafasdf adfadf fasfasdffsdf" />
+    <TextView
+        android:id="@+id/txtFecha"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight=".2"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="10/10/2000" />
+</LinearLayout>

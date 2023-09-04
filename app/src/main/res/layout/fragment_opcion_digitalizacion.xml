@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".ui.opcionesdig.view.OpcionDigitalizacionFragment">
+
+    <Button
+        android:id="@+id/btnmanual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginVertical="15dp"
+        android:tooltipText="Documentos Manuales"
+        android:text="REGISTRO MANUAL PROPIEDADES" />
+
+    <Button
+        android:id="@+id/btnautomatico"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:tooltipText="Convenios Cupones"
+        android:layout_marginHorizontal="15dp"
+        android:text="ESCANEAR CÓD. BARRA FACTURA" />
+
+</LinearLayout>

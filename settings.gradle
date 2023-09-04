@@ -1,0 +1,3 @@
+include ':documentscanermodule'
+include ':app'
+rootProject.name = "AppFarmascan"

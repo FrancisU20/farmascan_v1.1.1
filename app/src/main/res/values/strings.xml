@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AppFarmascan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="home_info">Escanee el código de barras del convenio o cupón.</string>
+    <string name="no_hay_datos">No hay datos que mostrar.</string>
+</resources>
